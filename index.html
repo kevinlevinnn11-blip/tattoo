@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASAP KEVIN TATTOO | Estilo Industrial Dark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        header {
+            background-color: #0f0f0f;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+        }
+
+        nav a {
+            color: #888888;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        /* SECCIÓN INICIO / HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: #888888;
+            margin-bottom: 35px;
+            font-family: Arial, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta {
+            background-color: #ff0000;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 0px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            letter-spacing: 2px;
+            font-size: 0.95rem;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-cta:hover, .btn-cta:active {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 20px #ffffff;
+        }
+
+        /* SECCIÓN PORTAFOLIO / GALERÍA */
+        .portfolio {
+            padding: 60px 0;
+            background-color: #080808;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #ff0000;
+            margin: 12px auto 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 769px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0px;
+            aspect-ratio: 3 / 4;
+            background-color: #0f0f0f;
+            border: 1px solid #1f1f1f;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:active, .gallery-item:hover {
+            border-color: #ffffff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* SECCIÓN CONTACTO */
+        .contact {
+            background-color: #0f0f0f;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 1rem;
+            margin-bottom: 35px;
+            color: #888888;
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 10px;
+        }
+
+        .btn-whatsapp {
+            background-color: transparent;
+            color: #25D366;
+            border: 2px solid #25D366;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+            font-size: 0.95rem;
+        }
+
+        .btn-whatsapp:active, .btn-whatsapp:hover {
+            background-color: #25D366;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #040404;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 11px;
+            color: #444444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-links {
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: #666666;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            font-family: Arial, sans-serif;
+            text-transform: none;
+            letter-spacing: 0.5px;
+        }
+        
+        .social-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">ASAP KEVIN</div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#galeria">Trabajos</a>
+                <a href="#contacto">Citas</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>ASAP KEVIN TATTOO</h1>
+            <p>Diseños personalizados, sombras profundas, realismo y arte oriental con trazos profesionales firmes.</p>
+            <a href="#contacto" class="btn-cta">Cotizar Trabajo</a>
+        </div>
+    </section>
+
+    <section id="galeria" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Algunos Trabajos</h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://i.postimg.cc/s1XxhDfw/IMG-2078.jpg" alt="Tatuaje Lobo"></div>
+                <div class="gallery-item"><img src="https://i.postimg.cc/Jt2ncVtP/IMG-2081.jpg" alt="Tatuaje Mariposa Espalda"></div>
+                <div class="gallery-item"><img src="https://i.postimg.cc/QVytkGVk/IMG-2082.jpg" alt="Tatuaje Leona y Cachorro"></div>
+                <div class="gallery-item"><img src="https://i.postimg.cc/jC527dq4/IMG-2083.jpg" alt="Diseño Oriental Rostro"></div>
+                <div class="gallery-item"><img src="https://i.postimg.cc/mhDkH2ZN/IMG-2084.jpg" alt="Diseño Oriental Peces Koi"></div>
+                <div class="gallery-item"><img src="https://i.postimg.cc/mh5DNfh9/IMG-2094.png" alt="Tatuaje Pez y Flores"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">¿Listo para plasmar tu idea?</h2>
+            <p>Escríbeme para platicar sobre tu diseño, tamaño, zona del cuerpo y darte un presupuesto sin compromiso.</p>
+            <a href="https://wa.me/50767584721?text=Hola%20ASAP%20KEVIN,%20quiero%20cotizar%20un%20tatuaje" target="_blank" class="btn-whatsapp">
+                Enviar Mensaje Directo
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://instagram.com/asap_kevinlevin" target="_blank">📸 Instagram</a>
+                <a href="https://facebook.com/TU_PAGINA_DE_TATUAJES" target="_blank">🔵 Facebook Tattoo</a>
+                <a href="https://tiktok.com/@TU_TIKTOK_DE_TATUAJES" target="_blank">🎵 TikTok</a>
+            </div>
+            <p>&copy; 2026 ASAP KEVIN TATTOO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
